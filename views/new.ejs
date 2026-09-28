@@ -1,0 +1,29 @@
+<%- include("head") %>
+<body>
+    
+    <header>
+        <%- include("nav") %>
+    </header>
+    <main>
+
+        <section class="New-Posts">
+            <form action="/posts/new" method="post">
+                <div class="card mt-3 rounded-3 p-3">
+                    <div class="card-body mt">
+                    <h5 class="card-title">Add New Post</h5>
+                    <div class="col-md-6 mt-2">
+                        <input type="text" class="form-control" name="name" placeholder="Your username" required>
+                    </div>
+                    <div class="col-md-6 mt-2" >
+                        <textarea name="content" class="form-control" rows="3" id="" placeholder="wirte your post" required></textarea>
+                    </div>
+                    <div class="col-md-6 mt-2 d-flex justify-contnet-end">
+                        <button class="btn btn-primary rounded-3">Post</button>
+                    </div>
+                </div>
+            </div>
+            </form>
+
+    </main>
+<%- include("footer") %>
+</body>

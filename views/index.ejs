@@ -1,0 +1,36 @@
+<%- include("head") %>
+<body>
+    
+        <header>
+            <%-include("nav") %>
+        </header>
+    <div class="container">
+    <main>
+        <section class="All-Posts">
+        <% for( const [index,post] of posts.entries()){ %>
+
+            <div class="col-md-4 d-flex">
+                <div class="card mt-3 rounded-3 shadow p-2">
+                <div class="card-body mt">
+                    <h5 class="card-title">@<%= post.name %></h5>
+                    <p class="card-text"><%= post.content %></p>
+
+                    <form action="/posts/<%=index %>?_method=DELETE" method="post">
+                        <button class="btn btn-outline-danger rounded-4">delete</button>
+                    </form>
+
+                </div>
+                
+                </div>
+            </div>
+
+        <% } %>
+        </section>
+    </main>
+
+</div>
+
+    
+   <%- include("footer") %>
+</body>
+</html>
