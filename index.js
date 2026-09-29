@@ -51,10 +51,10 @@ app.delete("/posts/:index",(req,res) =>{
     posts.splice(index,1);
     res.redirect("/posts")
 })
-app.get("/new",(req,res) =>{
+app.get("/posts/new",(req,res) =>{
     res.render("new.ejs")
 })
-app.get("/show",(req,res) =>{
+app.get("/posts/show",(req,res) =>{
     const query = req.query.q;
     let response = [];
     for(post of posts){
